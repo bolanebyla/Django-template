@@ -1,0 +1,14 @@
+{% load crispy_forms_filters %}
+<div class="login-form">
+    <h3>Вход в систему</h3>
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div class="row mt-3">
+            <div class="login-btn col-4">
+                <button type="submit" class="btn btn-outline-secondary">Войти</button>
+                <input type="hidden" name="next" value="{{ next }}"/>
+            </div>
+        </div>
+    </form>
+</div>
