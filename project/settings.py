@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'extra_views',
     'crispy_forms',
     'django_select2',
+    'users',
 ]
 
 if DEBUG and DEBUG_TOOLS:
@@ -85,6 +86,8 @@ DATABASES = {
 }
 
 # Password validation
+
+AUTH_USER_MODEL = 'users.User'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
